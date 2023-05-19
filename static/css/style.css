@@ -1,0 +1,42 @@
+:root {
+   --border-radius-pixel: 14px;
+}
+
+h1 {
+   text-align: center;
+   font-family: monospace;
+   font-size: 36px;
+}
+
+#gallery {
+   margin: 0 auto;
+   max-width: 1200px;
+   column-count: 3;
+   text-align: center;
+}
+
+.gallery-item {
+   break-inside: avoid;
+   margin-bottom: 16px;
+}
+
+.gallery-item figure {
+   margin: 0;
+   position: relative;
+}
+
+.gallery-item img {
+   width: 100%;
+   border-radius: var(--border-radius-pixel);
+}
+
+@media screen and (max-width: 500px) {
+   #gallery {
+      column-count: 1;
+   }
+}
+@media screen and (min-width: 501px) and (max-width: 1000px) {
+   #gallery {
+      column-count: 2;
+   }
+}
